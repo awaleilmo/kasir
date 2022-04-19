@@ -65,7 +65,6 @@ Catatan:
 
 ## Demo Aplikasi
 
-| --- | --- |
 | username | admin |
 | password | secret |
 
