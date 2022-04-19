@@ -1,9 +1,4 @@
-![Aplikasi Grosir Obat](public/imgs/readme-logo.png "Aplikasi Grosir Obat")
-
-[![Build Status](https://travis-ci.org/nafiesl/grosir-obat.svg?branch=master)](https://travis-ci.org/nafiesl/grosir-obat)
-[![StyleCI](https://styleci.io/repos/87638082/shield?branch=master)](https://styleci.io/repos/87638082)
-
-Aplikasi Grosir Obat adalah sebuah sistem kasir (Point of Sales) dan manajemen produk obat yang dibuat menggunakan framework Laravel, dibangun dengan Test-Driven Development.
+Aplikasi kasir adalah sebuah sistem kasir (Point of Sales) dan manajemen produk obat yang dibuat menggunakan framework Laravel, dibangun dengan Test-Driven Development.
 
 <hr>
 
@@ -70,7 +65,6 @@ Catatan:
 
 ## Demo Aplikasi
 
-| URL | http://grosir-obat.nafies.id/login |
 | --- | --- |
 | username | admin |
 | password | secret |
@@ -83,31 +77,21 @@ Catatan:
 - PHP ^7.2
 - Laravel 6.x
 - Database MySQL atau MariaDB
-- SQlite (untuk `automated testing`)
 
 ### Cara Install
 
 1. Clone atau download source code
-    - Para terminal, clone repo `git clone git@github.com:nafiesl/grosir-obat.git`
-    - atau `git clone https://github.com/nafiesl/grosir-obat.git`
+    - Para terminal, clone repo `git clone git@github.com:awaleilmo/kasir.git`
+    - atau `git clone https://github.com/awaleilmo/kasir.git`
     - Jika tidak menggunakan Git, silakan **Download Zip** dan *extract* pada direktori web server (misal: xampp/htdocs)
-2. `cd grosir-obat`
+    - download composer( https://getcomposer.org/download/ )
+2. `cd kasir`
 3. `composer install`
-4. `cp .env.example .env`
-    - Jika tidak menggunakan Git, bisa rename file `.env.example` menjadi `.env`
-5. Pada terminal `php artisan key:generate`
-6. Buat **database pada mysql** untuk aplikasi ini
-7. **Setting database** pada file `.env`
-8. Masukkan **Nama Aplikasi**, **Nama Toko**, **Alamat Toko** dan **Telp Toko** pada pada file `.env`
-    ```
-    APP_NAME="Apotek Sejahtera"
-    STORE_NAME="Apotek Sejahtera"
-    STORE_ADDRESS="Jln. Pramuka, No. 60, Banjarmasin"
-    STORE_PHONE="081234567890"
-    ```
-8. `php artisan migrate --seed`
-9. `php artisan serve`
-10. Selesai
+4. Pada terminal `php artisan key:generate`
+5. Buat **database pada mysql dengan nama dbkasir** untuk aplikasi ini
+6. `php artisan migrate --seed`
+7. `php artisan serve`
+8. Selesai
 
 ### Login Admin
 ```
@@ -115,11 +99,6 @@ Username: admin
 Password: secret
 ```
 
-### Automated Testing
-Aplikasi ini dilengkapi dengan **Testing Laravel**, ingin mencoba? Silakan:
-```
-vendor/bin/phpunit
-```
 <hr>
 
 ## Input Produk dan Satuan
@@ -179,10 +158,3 @@ Proses Entry transaksi baru:
 
 #### Laporan Penjualan Perbulan
 ![Laporan Bulanan](public/imgs/07-monthly-sales.jpg "Laporan Bulanan")
-
-#### Testing
-![Testing](public/imgs/05-testing.jpg "Testing")
-
-## Lisensi
-
-Project Grosir Obat merupakan software Point of Sales yang free dan open source di bawah [lisensi MIT](LICENSE).
