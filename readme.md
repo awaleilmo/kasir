@@ -63,13 +63,6 @@ Catatan:
 
 <hr>
 
-## Demo Aplikasi
-
-| username | admin |
-| password | secret |
-
-<hr>
-
 ## Instalasi
 
 ### Spesifikasi
